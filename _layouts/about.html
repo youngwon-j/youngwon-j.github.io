@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="post">
+
+  <article>
+    <div class="row">
+      <div class="col">
+        {{ content }}
+      </div>
+        {% if page.profile %}
+        <div class="profile col-4 {% if page.profile.align == 'left' %}order-first{% endif %}">
+          {% if page.profile.image %}
+            <img src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}">
+          {% endif %}
+          {% if page.profile.address %}
+            <div class="address">
+              {{ page.profile.address }}
+            </div>
+          {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    {% if page.news %}
+      {% include news.html %}
+    {% endif %}
+
+    {% if page.social %}
+    <div class="social">
+      {% include social.html %}
+      <div class="contact-note">{{ site.contact_note }}</div>
+    </div>
+    {% endif %}
+  </article>
+
+</div>
