@@ -11,7 +11,7 @@ Hello world!
 {
   "name": "Youngwon Jang",
   "nation" : "Republic of Korea",
-  "company" : "NHN Entertainment Corporation",
+  "company" : "NHN Corporation",
   "team" : "membership development team",
   "role" : "SW developer",
   "Level" : "Junior",
